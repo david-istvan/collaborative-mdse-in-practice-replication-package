@@ -1,0 +1,72 @@
+%Add this to preamble:
+%\makeatletter
+%\newcommand\notsotiny{\@setfontsize\notsotiny{7}{7.5}}
+%\makeatother
+
+\begin{table*}[]
+    \tinier
+    \caption{The ten most and least adopted and needed techniques.}
+    \label{tab:top-bottom-need}
+    \subfloat[Adoption.]{
+        \begin{tabular}{@{}lll@{}}
+            \toprule
+            \multicolumn{1}{c}{\textbf{Feature}} & \multicolumn{1}{c}{\textbf{Feature group}} & \multicolumn{1}{c}{\textbf{\%}} \\
+            \midrule
+			Collaboration at model level	 &	 Models and languages	 &	 93	 \\ 
+			Visual editors	 &	 Editors and modeling environments	 &	 90	 \\ 
+			Desktop-based environment	 &	 Editors and modeling environments	 &	 90	 \\ 
+			Email	 &	 Asynchronous communication	 &	 88	 \\ 
+			User identification	 &	 Stakeholder management	 &	 87	 \\ 
+			Offline collaboration	 &	 Collaboration dynamics	 &	 85	 \\ 
+			Chat	 &	 Synchronous communication	 &	 83	 \\ 
+			External communication tools	 &	 Integration	 &	 82	 \\ 
+			History	 &	 Versioning	 &	 80	 \\ 
+			Screen sharing	 &	 Synchronous communication	 &	 80	 \\ 
+
+            \multicolumn{3}{c}{...} \\ 
+			Forum	 &	 Asynchronous communication	 &	 15	 \\ 
+			Hand gestures	 &	 Synchronous communication	 &	 13	 \\ 
+			Metrics of model complexity	 &	 Model manipulation and query	 &	 12	 \\ 
+			Multimedia annotations	 &	 Asynchronous communication	 &	 12	 \\ 
+			P2P architecture	 &	 Network architecture and robustness	 &	 11	 \\ 
+			Voting	 &	 Asynchronous communication	 &	 10	 \\ 
+			Sketch-based editors	 &	 Editors and modeling environments	 &	 8	 \\ 
+			Conflicts table	 &	 Asynchronous communication	 &	 8	 \\ 
+			Natural Language Processing	 &	 Model manipulation and query	 &	 8	 \\ 
+			Mobile environment	 &	 Editors and modeling environments	 &	 5	 \\ 
+
+            \bottomrule
+        \end{tabular}%
+    }
+    \subfloat[Need.]{
+        \begin{tabular}{@{}lll@{}}
+            \toprule
+            \multicolumn{1}{c}{\textbf{Feature}} & \multicolumn{1}{c}{\textbf{Feature group}} & \multicolumn{1}{c}{\textbf{\%}} \\
+            \midrule
+			Model browsing/search	 &	 Model manipulation and query	 &	 100	 \\ 
+			Multi-view modeling	 &	 Models and languages	 &	 98	 \\ 
+			Collaboration at model level	 &	 Models and languages	 &	 98	 \\ 
+			Visual editors	 &	 Editors and modeling environments	 &	 95	 \\ 
+			Model validation	 &	 Model manipulation and query	 &	 95	 \\ 
+			History	 &	 Versioning	 &	 95	 \\ 
+			Real-time collaboration	 &	 Collaboration dynamics	 &	 95	 \\ 
+			Model merging	 &	 Versioning	 &	 95	 \\ 
+			RBAC	 &	 Stakeholder management	 &	 93	 \\ 
+			Screen sharing	 &	 Synchronous communication	 &	 93	 \\ 
+
+            \multicolumn{3}{c}{...} \\ 
+			Call-For-Attention	 &	 Asynchronous communication	 &	 50	 \\ 
+			Anonymous access	 &	 Stakeholder management	 &	 50	 \\ 
+			Voting	 &	 Asynchronous communication	 &	 45	 \\ 
+			Forum	 &	 Asynchronous communication	 &	 44	 \\ 
+			Sketch-based editors	 &	 Editors and modeling environments	 &	 38	 \\ 
+			Integrated prof.-soc. networking	 &	 Asynchronous communication	 &	 37	 \\ 
+			P2P architecture	 &	 Network architecture and robustness	 &	 34	 \\ 
+			Multimedia annotations	 &	 Asynchronous communication	 &	 31	 \\ 
+			Hand gestures	 &	 Synchronous communication	 &	 22	 \\ 
+			Mobile environment	 &	 Editors and modeling environments	 &	 10	 \\ 
+
+            \bottomrule
+        \end{tabular}
+    }
+\end{table*}

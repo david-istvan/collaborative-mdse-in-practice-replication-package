@@ -1,0 +1,32 @@
+%Add this to preamble:
+%\makeatletter
+%\newcommand\notsotiny{\@setfontsize\notsotiny{7}{7.5}}
+%\makeatother
+
+\begin{table*}[]
+    \tinier
+    \caption{The ten most and least adopted and needed techniques}
+    \label{tab:top-bottom-need}
+    \subfloat[Adoption]{
+        \begin{tabular}{@{}lll@{}}
+            \toprule
+            \multicolumn{1}{c}{\textbf{Feature}} & \multicolumn{1}{c}{\textbf{Feature group}} & \multicolumn{1}{c}{\textbf{\%}} \\
+            \midrule
+{{%%mostadopted%%}}
+            \multicolumn{3}{c}{...} \\ 
+{{%%leastadopted%%}}
+            \bottomrule
+        \end{tabular}%
+    }
+    \subfloat[Need]{
+        \begin{tabular}{@{}lll@{}}
+            \toprule
+            \multicolumn{1}{c}{\textbf{Feature}} & \multicolumn{1}{c}{\textbf{Feature group}} & \multicolumn{1}{c}{\textbf{\%}} \\
+            \midrule
+{{%%mostneeded%%}}
+            \multicolumn{3}{c}{...} \\ 
+{{%%leastneeded%%}}
+            \bottomrule
+        \end{tabular}
+    }
+\end{table*}

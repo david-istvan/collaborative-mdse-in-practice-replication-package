@@ -1,0 +1,58 @@
+dimension;feature;current
+Model management;Collaboration at model level;100.0
+Model management;Collaboration at metamodel level;16.67
+Model management;MVM;25.0
+Model management;Importing external languages into the modeling environment;23.61
+Model management;Model validation;34.72
+Model management;Visual editors;72.22
+Model management;Textual editors;13.89
+Model management;Tabular editors;9.72
+Model management;Tree-based editors;25.0
+Model management;Sketch-based editors;9.72
+Model management;Editors w/ multiple notations;48.61
+Model management;Desktop-based environment;61.11
+Model management;Web-based environment;37.5
+Model management;Mobile modeling environment;6.94
+Collaboration;RBAC;62.5
+Collaboration;User presence visualization;95.83
+Collaboration;Human-Machine collaboration;1.39
+Collaboration;Real-time collab;59.72
+Collaboration;Offline collab;50.0
+Collaboration;Model diff;97.22
+Collaboration;Semantic diff;15.28
+Collaboration;Internal versioning;4.17
+Collaboration;External versioning;9.72
+Collaboration;Model merging;33.33
+Collaboration;Version branching;18.06
+Collaboration;History;23.61
+Collaboration;Locking;25.0
+Collaboration;Prevention;11.11
+Collaboration;Conflict awareness;30.56
+Collaboration;Automation of resolution;31.94
+Collaboration;Manual resolution;44.44
+Collaboration;Eventual consistency;51.39
+Collaboration;P2P architecture;15.28
+Collaboration;Cloud architecture;95.83
+Communication;Chat;37.5
+Communication;Audio;5.56
+Communication;Voice;5.56
+Communication;Hand gestures;1.39
+Communication;Face-to-face;5.56
+Communication;Reviews;4.17
+Communication;Screen sharing;2.78
+Communication;Email;11.11
+Communication;Wiki;1.39
+Communication;Forum;1.39
+Communication;Proposals;15.28
+Communication;Voting;12.5
+Communication;Annotations;22.22
+Communication;Comments;16.67
+Communication;Feedback;9.72
+Communication;Call-For-Attention;6.94
+Communication;Sticky notes;1.39
+Communication;Tags;2.78
+Communication;Conflicts table;5.56
+Communication;Multimedia annotations;1.39
+Communication;Commit messages;8.33
+Communication;Built-in communication tools;68.06
+Communication;External communication tools;22.22

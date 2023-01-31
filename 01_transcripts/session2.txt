@@ -1,0 +1,258 @@
+MODERATOR INTRODUCES TOPIC 1: MODEL MANAGEMENT, AND ASKS THE 3 QUESTIONS.
+
+[05:39]
+
+PARTICIPANT-5: On point two [Aim], I'm missing simulation and debugging, and error analysis. So, the consistency checking. I think that's crucial. So if you're saying "I'm also editing a model and I'm going to do code generation", and if you see that as part of model management, then debugging, model checking and simulation should also be part of this picture. That's the first thing that I miss.
+
+PARTICIPANT-5: More in a detail, if you links between models, generative, static, and transformative, I would say. Because you can imagine transformations that are between models without having any static links but still derive from each other. The same as generative. So there's a subtle difference between code generation and model transformation of course because code [?] is also a model in a different syntax, but for being complete, I think generative is not enough. Also transformations should be part of such a picture.
+
+PARTICIPANT-5: There's nothing here that I do not recognize as being part of the practice, except that reverse engineering is something that is always wanted and never successful. But that's more an experience, so it's always planned and at the end it's always a disaster. And there are good reasons for that. But again, it is part of practice, but not for a long time.
+Or there must be a [?] relationship between the code and model. But then it's actually just a visualization difference, and that's not reverse engineering at all. So it fits in another [?].
+
+
+MODERATOR: You mentioned simulation, debugging, sort of these scenarios. How do you think these scenarios pertain to collaboration? Do you think these enable collaboration, do you think these scenarios require collaboration, do you think these scenarios are more efficient when collaboration is facilitated around them?
+
+PARTICIPANT-5: You can also question for any elements here. So, when you change the model, you need to check the model. When you work together, it is very important that you're at [?] different levels of consistency and completeness. And normally if you work, for example, in a version control system, you are trying to reach a certain level of consistency before you expose it [the models] to the rest of the work. So consistency on the one hand, and editing and collaboration are very important, because you don't want to expose your in-between resource which could cause errors, it's kinda isolated. But if you do collaboration on a more detailed level, then it's fine within a small group to have an inconsistent in-between resource, and you have to agree with each other, when you are going to publish it to a higher level, or something like that. And bug fixing and simulation are part of that process, because you want to simulate to see if your model applies to the requirements, and is consistent, and it works as you would expect. So I really think that since all those three are major parts of modeling in general, they also are applicable for and relevant for collaboration, especially the consistency. Because perhaps you would even build in rules that you cannot even share a model if it not has a certain level of consistency. It's normal in environments that if you, for example MPS, commit, then by default it will first check the models with a consistency check and if there are some warning or error level then it will pop-up and say "are you sure"? So it's definitely part of that. So yes, I would say they are all relevant, especially the consistency check.
+
+
+MODERATOR: Participant-4, what is your take on this part of the model?
+
+PARTICIPANT-4: Interesting. In general, this is in line with what I know and how I would categorize it. Model management, I wouldn't typically combine model management with the creation and editing of models. So that's a bit of a surprise in a sense. Because I have the feeling that model management is more a layer under the editing. But it's interesting that this appears combined in this way. So I would maybe extract that into two different categories or topics. But fine, I understand the combination.
+
+PARTICIPANT-4: So in the notation: visual. Yeah, all of them are visual. I don't think most of them are smellable. So I guess you mean diagrammatic, in this one? Because textual and tabular are also visual. I wouldn't call it visual. Let's see, those are the three types [talking about the three types of Notations] we use, and mixed.
+
+PARTICIPANT-4: I was looking at analysis. So, this consistency that W meant is one type of analysis. But we also have, in a sense, that's interaction with external tools, but it's more specific. So I'm missing that distinction, we typically either go to a custom simulator, or a constraint solver, or some general other model checker, it is an interaction with an external tool, but it's much more specific then that. And it's part of this maybe what is here called "Low-code round-trip engineering". But it doesn't have to be code. So I'm not sure it fits into that particular category. And "low-code round-trip engineering", I cannot place exactly what it means with "low-code". Do you mean that it's succinct model which is then converted into something that's interpreted and in the same phrasing you get your answer back?
+
+MODERATOR: Well, the expression, this notion of "low-code" is a keyword that today is very often used to explain what model-driven engineering gives you. So in many cases you hear,    instead of MDE or MDSE people would say it is low-code engineering. So you're designing low-level code on a high modeling level, so that distinction is often captured in this extra "low" prefix to the "code".
+
+PARTICIPANT-4: Okay, so low level code?
+
+MODERATOR: Yes, low level code.
+
+PARTICIPANT-4: So you generate to some target.
+
+MODERATOR: Yes.
+
+PARTICIPANT-4: So then indeed, that is a different thing than analysis. I do miss the debugging as well. That again is related to my first remark: I'm not sure that's part of model management itself. So, debugging and editing are features of the model... Well, that's a good question what that category would be. Debugging, I don't consider it under model management itself. If I do find the right phrasing, I'll let you know.
+
+PARTICIPANT-4: I had one small remark. This distinction between artifacts, model-code and abstract model. The phrasing itself surprises me, that's a bit unexpected. I think I have some idea of what the distinction is, what an abstract model is. Apparently it's different from code that is generated from a model.
+
+MODERATOR: What we mean here is that there is a distinct group of research that is considering pure models, like Petri nets, class diagrams, and all that, and that's where the story ends, and their contributions are in that realm. Whereas another line of research considers going from models to code and some of these even consider code being a special form of model. This is what we are going after here in this topic.
+
+PARTICIPANT-5: Do you mean also that an abstract model could have not precise semantics, and is more "a picture" to talk about? And that model-code is more precise, formal? Is that implied by this word "abstract", or is that not the case?
+
+MODERATOR: It is up to your interpretation, really.
+
+PARTICIPANT-5: Because that is the way I interpreted this separation. I mean, there are lots of part in UML, for example, that have very vague semantics. And people are asked [?] to work with it, like use-cases [use-case diagrams]. And you actually don't know what it means. But everybody loves it, because you can just freely churn it [???]. So that's how I interpreted abstract model. And model-code is then something which is more precise, that you can generate code from, simulate it, or has a precise meaning. That's just an observation, that's how I interpreted it. That's how it comes across, for me.
+
+MODERATOR: What do you think the difference is between these two aspects in your interpretation, regarding collaboration?
+
+[19:00]
+PARTICIPANT-5: Regarding collaboration, depends very much on the domain. [??? some domain] could be completely different than in a tax office, for example, or an insurance company. There are many people many people within more in the tax organization that like models which are [??? - 19:27]. And they can model, and at some points there are other models that make that [the previous models] more precise in the sense of "with specific semantics", or with clear semantics, which you can check, and could simulate, etc. And then the collaboration exists that there is a link between those two, because it's a refinement, if you'd like. And you need to be sure that different groups that work on different levels of modeling are expressing the same thing. Or at least make clear that one is a manifestation of the other, in some form. So in that sense, collaboration is very important, because it could be very valuable to trace, to navigate, to link those different levels of models.
+
+PARTICIPANT-4: About traceability. I see "linking between views, models, code and applications". I guess that is synchronization between views, cross-referencing, etc. But also across different artifact level, so from model to code, etc. Or from model to model transformation [?] so that you have traceability. I find it a bit strange that it is in the integration process part. So if I look at it as traceability, then I don't understand why it's in the integration process. So that's surprising to me. If I look at it as that you know which model produced which part of the code, could be used in integration process. But that seems not the primary purpose of traceability in that sense. For me at least.
+And in the top, abstract model and model-code, as artifacts, does that exclude artifacts such as xml files, or is that composed in that abstract model, can have whatever representation?
+
+MODERATOR: Yes, it can be interpreted as a model, I assume.
+
+PARTICIPANT-4: There is some grey area here, but in general, I agree with this. And I don't see anything that I really miss as a major component.
+
+PARTICIPANT-5: For example, in the tax office, if you have one structured Dutch, so it's formalized Dutch language, natural language, structured language. And this is the way they define the rules for the tax calculation. But they are obliged each rule to point and reference the lemma in the law, the Dutch law, so you can link that, you can compare the formalization of it, which is still in Dutch, but one way interpretable, and the law. How does that fit? I'm not sure whether that kind of traceability is part of this. Or you would say that the exact model can also be the law. If you understand what I mean. And so, you're not only pointing to models, if you are talking about references. And it's very important for collaboration, I'm trying to get ahead of your question, because if you are changing something, then another other person needs to validate what you are doing, because you are referring to the same source that describes the requirements, or your input. So the relationship between that is crucial. So in the tax office, everything is wired. Understand what I mean? It has to be, because otherwise you cannot prove whether it is consistent according to the law.
+
+PARTICIPANT-4: I just realized there's nothing here related to versioning. And for model management, I think, that's a major component.
+
+PARTICIPANT-5: Yeah, right.
+
+MODERATOR: I'm looking at MODERATOR-2, I guess it will pop up later, right?
+MODERATOR-2: Yes.
+MODERATOR: Okay. I'm asking this because then maybe we could move to the next topic.
+MODERATOR-2: Yes, good call, PARTICIPANT-4.
+MODERATOR: Very good point, indeed.
+
+PARTICIPANT-4: I would've expected it here. But okay.
+PARTICIPANT-5: But it's [apparently] part of collaboration.
+PARTICIPANT-4: Yeah, it's a grey area. But I would have [it] in model management. I would definitely assume that there is a link.
+PARTICIPANT-5: But anyhow, if you want to create a hierarchy or something, it seldom [???].
+PARTICIPANT-4: Yeah, it's the same with people putting stuff on a wiki, right? It's never the same structure that everybody likes.
+PARTICIPANT-5: Yeah, yeah. [??] Whatever choice you make, of course, we're not complete. 
+
+[25:26]
+
+ISTAN: Okay, so, it's been 38 minutes. This part, admittedly, was the biggest part of the theory. So we spent just enough time on this topic. But since you touched upon a topic which comes later, maybe it's time that now we move on. If you're okay with that.
+
+PARTICIPANT-4: That's fine by me. I have no further comments on this at the moment.
+
+
+
+[25:56 - 27:19] MODERATOR INTRODUCES TOPIC 2: COLLABORATION, AND ASKS THE 3 QUESTIONS.
+
+PARTICIPANT-5: The first question, what does syntactic and semantic mean, if you are talking about this?
+
+MODERATOR: Yes, I give you an example. But before I give you an example, I just want to make sure that your question means that this is not there in your case in the practice, right? So you never met this notion of semantic differencing, and syntactic differencing, right?
+
+PARTICIPANT-5: Perhaps I do, but by a different name.
+
+MODERATOR: So, by syntactic differencing we mean, we can have a look at the XML or XMI files, which persist two models, and I can give the user the differences between two models in terms of XML or XMI elements. Whereas, a semantic difference will give meaning to these differences. So, even though the comparison is done on the XML level, the user on a higher level is provided with a difference which says: there's a difference between the worst-case execution time of this component, and maybe in a visual form, where there's a rectangle, and an attribute, and it's shown in red. So this is semantic. And semantic means that you look at the syntactic differences, maybe you collect them, and you transform it to one interpretation one user likes, and another interpretation another user likes. This is what we mean by semantic.
+
+PARTICIPANT-5: Okay, so, can I just mirror an example? Let's take the tax office, let's take an example. [???] You can create examples, tests, samples, a citizen that has to submit income, and whatever is [???], and then you can measure what the result is. And then, by what you mean by semantic diff, is that if you have two versions of the textual, I can you can see the difference in results in this specific example. That you can see, well, if it's that version, then it has to pay 2000 dollars, and otherwise 3000. Is that what you mean, so that you can diff the results of your simulation?
+
+MODERATOR: This the example of a difference between textual and visual, but maybe a better example of the difference between syntactic and semantic would be: you and me collaborating on a model, and the model being persisted as a graph. And there is a difference between your graph and my graph. And the difference can be shown as a difference between nodes. But that graph is actually a reachability graph of a Petri net, so what a reachability graph means that maybe the difference is about a deadlocking property of the Petri net we are actually building. So, while our models are persisted as a graph, a reachability graph, I want to see the difference as "oh, PARTICIPANT-5 now has a deadlock in his Petri net, and I don't", or the other way around. I don't care about the actual graph, I care about the meaning of it. So, this is semantic.
+
+PARTICIPANT-5: Yeah, but that's also the former example, isn't it? Because if you execute a model, with an example, then you see it means for that example, and it will change probably. So I think it's quite similar. But then I know what you mean by semantic. But it has nothing to do with what do you do on the XMI level text, or showing the diagram itself and showing the difference. For example, in MPS, the diff/merge functionality projects the two differences, and the difference itself, so the two versions and the difference itself, 
+in the editors that you define. So in the language with all everything. Because that's a different power of MPS, which is not always available. Sometimes you just have to merge the XMI file and XML, even if that's not the surface syntax in which you edited. So, perhaps that's something that I miss. Although, I don't know if you are aware of that, but it is always a good thing if you can see the difference in the same syntax, if it's a syntactic difference of course, as that you edited. And not all tools provide that. But that's not the difference that you mean.
+
+MODERATOR: This is an open-ended discussion, and our goal is to see what is there in the industry, and what is missing. You just mentioned that some tools are providing syntactic diffing, and some tools don't. Is that what you're saying?
+
+PARTICIPANT-5: Yes.
+
+MODERATOR: And you said it would be an important feature of any tool to be able to show the syntactic differences to the users, right?
+
+PARTICIPANT-5: Yes. In the same language, with the same format, in the same editors, surface syntax or concrete syntax, however you want to name it, as in they edit and read the models.
+
+PARTICIPANT-4: But maybe a sub [?] in the syntactic, I would indeed expect the underlying persistence model and the editor representation of the syntax. Yes. Because that's different in MPS than from textual based.
+
+[34:02]
+
+MODERATOR: What do you think would happen if you two were collaborating, and you both prefer seeing the syntactic differences, but one you are using a textual language, and the other one is using a graphical language. Or both of you are using textual languages, but different ones, yet you are building the same system. Do you think syntactic differencing would help you to collaborate in this case?
+
+PARTICIPANT-5: Yes, I don't see the distinction between the fact that you edit the models or you diff the models. You need to see the models in the language that you are comfortable to work with. Whether you're editing or diffing, you should not switch to a different language. So yes, I think that would be [helpful?]. And it's not provided. That would be an additional value. I don't see that [in practice now].
+
+PARTICIPANT-4: I don't recognize that [?] either. So, in general, this is in line with my experience. I do expect that model versioning is also part of model management. Conflict resolution, in a sense, already part of model management. As well as the RBAC. But I understand this is more specific. I had a question. If you have, for example, a Statechart language, for which you have a textual editor and a diagrammatic editor, and then try to compare or merge or diff the two, then you have two different situations: again, parser based and projection based. Because the projection based can have the same underlying model, and you can switch between these projections without any issues. But if you do this in a parser-based environment, then these are actually two different models that are synchronized with each other, possibly. And in my mind, there is a significant distinction between the two. And I'm not sure... I guess you mean this in a broader sense? Diffing, merging between models with different representations, languages... But I don't think all combinations make sense. So how would you compare a textual model with a diagrammatic model if there's no transformation from the diagrammatic one to the textual one that makes any sense?
+
+MODERATOR: Can you think of an example when you needed this at your company, and you weren't able to solve it? Or you looked at it and realized, this is not the way to go?
+
+PARTICIPANT-4: For example, in MPS, we have two [languages?], for electornics people and software people working in the same model with the same language, but they have two different projections. The first projection shows only the software-related parts, the second projection only the hardware/electornics-related parts. And there's a third projection that blows everything up and becomes a very long list and shows everything. You can do the diffing and merging on that total model that shows all the components. So we don't have conflicting views, so to say. We only have subset projections. And because it's the same underlying model, you can choose the same projection. And then you can do diffing. We don't really do textual-vs-diagrammatic. We first make them into the same representation, and then start comparing. It's slightly surprising to see that semantic and syntactic diffing has been distinguished; but it makes sense. So, unexpected, but makes sense.
+
+MODERATOR: You mentioned textual vs graphical multiple times; as opposed to semantic-vs-syntactic. Does this mean that, in your experience, semantic and syntactic diffing is not really there as a topic? So is it more of a horizontal distinction (language A, language B, language C...); rather than a vertical distinction between different levels of syntax, semantics, etc?
+
+PARTICIPANT-4: Yes. I think that's a good summary. I do think it has value, and it's an interesting topic. But I have not seen any application.
+
+PARTICIPANT-5: Except, if you are already in your modeling environment, have these different levels as different languages and models that are kept in sync, by transformations. Then it's just a big model, and then you can see the differences, because they are all models. So that's implied, if you have such an environment. 
+It depends very much on whether you derive the semantic level, and not persist it from your syntactic level; or you have this semantic and syntactic level just as models side-by-side, you can have them derived, and you can compare them, using purely syntactic tools. But that's still for me a bit vague, where syntactic stops and semantic begins. Because "semantic" is a very overloaded term. Some people think, that for example, a type checker is something semantic; I don't agree with that, it's purely syntax, it's just well-formedness. Semantics is the meaning of it, in terms of the object system that it describes: what is a valid model and not. So that's how I interpret it.
+I'm missing a very important element here. You say Git integration. The other one is database integration. On a technical perspective, that's something different.
+And also: the synchronous/asynchronous dimension. Although normally it becomes synchronous if you have a database. But on the other hand: you don't need to have a database for synchronous real-time collaboration.
+
+PARTICIPANT-4: Yes, an eventually consistent database, that's yet another challenge.
+
+PARTICIPANT-5: And the other dimension that I have, and we really have customers that work like that, is that they to the model versioning in the language itself. So that they have different versions of modeling artifacts. So for example, insurance versions, within the models itself. And then they compare these. So they don't have a version as in a file system, but in the model. And the model grows and grows, and it has different versions and deltas as part of the model itself. And then you have workgroups sharing a certain version work up on it, and distribute it, and others can revert to it... Then it's completely in the metamodel defined what the versions are, and how to kope with that. And that's also collaboration and it has nothing to do with databases, or Git integration, because they don't help with your collaboration; it is the syntax itself that defines how the collaboration [?]. And I know that combination with synchronous real-time, with a database. There are big insurance companies that work that way, and model their insurance policies. So it complicates things a bit, but in real life, it's very important.
+
+[45:00]
+PARTICIPANT-4: Does conflict resolution also contain conflict detection?
+
+MODERATOR: Does it, in your experience?
+
+PARTICIPANT-4: I think those are two separate items. But some people might disagree. And I think conflict resolution also has a third one [value], which is mixed manual-automated combined [resolution]. Because some of them [conflict] can be done [resolved] automatically, but in a diff/merge viewer I typically get the option "okay these things I can resolve automatically" and shows the result; and then it highlights the parts where it can't be automatically resolved, and it says "okay, now you're up". So that's the mixed approach, I think.
+
+PARTICIPANT-5: And even if it can be done automatically, you can have the freedom to choose to do it manually.
+
+PARTICIPANT-4: And you can even define in your language how certain conflicts need to be dealt with. There is a version control aspect in that, yes.
+
+MODERATOR: So how about the other way around? For example, when you cannot make an automated conflict resolution? What is your experience with that? How do you detect that the conflict resolution cannot be carried out in an automated fashion? And then how do you deal with that situation?
+
+PARTICIPANT-4: I'm not sure I understand correctly. Is then that a manual conflict resolution?
+
+MODERATOR: Yes, but how do you carry it out?
+
+PARTICIPANT-4: Ah, the process? 
+
+MODERATOR: Yes. Could you outline what concerns you touch upon when you have to manually resolve a conflict?
+
+PARTICIPANT-4: That's a tricky one. If you have a minor diversion, then it's typically very simple to detect the local changes, and to verify whether it's a minor conflict. But if it's a bigger one, then what typically happens is that once you've converged to the versions into a single version again, you need to do additional checks to see if that was indeed the correct way of merging them. So there's an iterative process sometimes to check whether the combination of changes can be integrated. And even in an extreme case, if change A and change B both need to be adapted, that you also need some additional changes to combine the two in a proper way. This can get quite ugly.
+Model version, you have diff/merge... that's an interesting one. I would expect something like branching here. And strage one, but Git-related: rebasing is also a very important one to try to keep the history as clean as possible from the outside. Cherry picking and rebasing - those are quite complex tasks, but I believe they are part of the model versioning system. Question is, what does it mean in a collaborative context? Do you need to have a real-time view on the same thing to create these resolutions, instead of doing a pair programming? Collaborative conflict resolution currently looks like [this]: I call someone on Teams or Zoom or whatever, and then we share one screen to finalize those details, before pushing it back.
+
+PARTICIPANT-5: That's my experience too. So, a conflict is a typical starting point to a communication.
+
+PARTICIPANT-4: Yes, and then there is one person in control, and not multiple. That I think is very important, otherwise you quite easily end up in a situation where there are conflicts created in the conflict resolution.
+
+PARTICIPANT-5: I agree, the that is executing it [the merge] needs to be able to ask to other one, that made the change, if the results are in accordance with his requirements.
+
+PARTICIPANT-4: Yes. And conflict resolution also has a synchronous and asynchronous version. If you look at DevOps pipeline: if you have a pull request, you can add comments to the pull request, someone can look at it later. While you can also simultaneously look at the pull request and have updates on the changes. But I might be going too much into details...
+
+[51:00]
+MODERATOR: And these features are there in the practice?
+
+PARTICIPANT-5, PARTICIPANT-4: Yes, they are.
+
+PARTICIPANT-5: And one more thing, versioning is not only about that you can work in parallel and merge your results. Versioning is also there for history, so that you can know when and who and why did something in the history.
+
+PARTICIPANT-4: Yes, history is important.
+
+PARTICIPANT-5: Crucially important. So that's part of your collaboration.
+
+PARTICIPANT-4: Tagging would be very useful.
+
+MODERATOR: I just wanted to touch upon a topic you mentioned before: eventual consistency. What do you think eventual consistency can contribute to collaboration? What is your experience, what did you see in practice, and what do you envision should be there but it's not there?
+
+PARTICIPANT-4: At the moment, I think, the current state of practice is that it's all directly consistent databases as a backend. When we're talking about what DClare aims to be, and this is a more eventually consistent view on the system, right? So it's kind of a distributed database. So there are some efforts going on, have not used them, but I'd like to do that.
+
+MODERATOR: The main question is whether the notion of eventual consistency would contribute to a collaborative system?
+
+PARTICIPANT-4: I think it's solved at a different place than the database. But if you do collaboration, I do think you'd like to have eventual consistency over strong consistency. Because I think with strong consistency systems don't scale to the size they need to. In terms of number of models, size of model elements, connections between models, and the number of users that can actually simultaneously edit these things. That's my experience.
+
+PARTICIPANT-5: The problem with consistency is that it's very leveled. For example, if I work in two different languages, perhaps there is a minimum amount of consistency needed to be able to even translate one language to the other. So if I collaborate in two different languages, then must be immediately some level of consistency for being able to collaborate, because otherwise the other one cannot see it [the changes] in his language. On top of that, for example, if your type system is inconsistent, so there's a type error, that's not a problem at all, because maybe one of the collaborators can solve it. So that kind of inconsistency is okay. But then if the test cases are run, perhaps that's the level where you want to have consistency in terms of all the tests being in agreement, before continuing to pushing it to git, or releasing it to another level of collaboration. So even consistency can be in a small group, in a bigger group, and then you have different levels of how broad you share your models, how high your consistency requirements are. So that's what I see. I can't really make a distinction between consistent and inconsistent.
+
+
+
+
+[57:28-59:00] MODERATOR INTRODUCES TOPIC 3: COMMUNICATION, AND ASKS THE 3 QUESTIONS.
+
+PARTICIPANT-5: I think it's a little bit abstract for me. That's my first observation. And the other one is that if I try to give it a meaning, then like model differencing and automatic change propagation, than I think what is the difference between communication and model management then? Because I was more thinking about any not model-related communication which is needed between humans to be able to work together to create model. That's what I thought communication is about. So that it is distinguished [logically isolated] from the model itself. Because sharing models is already covered by the collaboration and model management here.
+
+MODERATOR: What we mean by "Means" is that if you're able to infer a difference between models, you can communicate the changes. Are you missing something from this communication aspect?
+
+PARTICIPANT-5: I don't know, because I don't know what it means.
+
+PARTICIPANT-4: I also have issues understanding it. But if I look at Communication, I think more about the common example: Google Docs. If you have the document in front of you, that's the model. And you'd like to highlight where someone is, maybe what they are doing, what they have selected, and potentially putting comments and other types of signals [symbols] to the user. I had that more in mind with Communication. I do think stakeholder heterogeneity is an interesting one, but it was not my first intention when I thought about Communication.
+
+MODERATOR: What was your first intention? We can take a step back and discuss the topic without focusing on the theory here. So what do you think are the most typical communication scenarios in collaborative software engineering?
+
+PARTICIPANT-4: Showing the current activity, the current state of the others. The reviewing of the model, which is outside of the model, it's connected to it, but it's not part of it.
+
+MODERATOR: Can you think of an example when you were collaborating on a model, and they were distant, and needed to communicate with each other? We can approach this from various angles: why they had to communicate, what they did, and how they did it. So why, what and how? Why do you need any means of communication when the models are supposed to carry every information?
+
+PARTICIPANT-4: The model reflects the particular state of ideas you currently have. If you want to evolve that, you need reviewing and updating phase (which is part of the previous categories).
+
+PARTICIPANT-5: If you have the synchronous collaboration, editing and updating of models, then it works better if you also have a communicational connection, or even a visual connection, as we have now. So you're editing the same model, but you are in the same room instead of peer-to-peer programming [???]. So then you talk about the model and you make changes, so it's a kind of collaboration where you can also use the normal, human means as talking to each other, and gestures to communicate on what you're doing. Because otherwise it becomes very abstract: you see the same model and you see all kinds of changes without talking about it. We that normally in Google Docs.
+
+MODERATOR: What do you think the state of the practice is today? Are MDE tools collaborative enough to support these informal means of communication too, or you have to turn to other tools?
+
+PARTICIPANT-5: [Immediately answering.] The latter. It's just side-to-side now. [As in: MDE and communication tools are used together in practice.]
+
+PARTICIPANT-4: Yes. The one place where it does integrate is in pull requests, where you have the ability to add reviews and comments on a change set.
+
+PARTICIPANT-5: Yes.
+
+MODERATOR: Do you think this is an issue from a collaborative modeling point of view? Is it a problem that you don't have built-in features of less formal communication? Like a chat? Is that an issue to be solved, or is it okay to have MS Teams or Skype to be used for communication?
+
+PARTICIPANT-4: It's not an issue per se, but it is convenient to have the model and the conversation/history of the model in the same place. Because then someone else who wasn't in the original Team/Zoom chat, can later read back on the discussion. Eventually this can become important. For now we can side-step this by Teams and email and other kinds of tools.
+
+PARTICIPANT-5: In the Tax Office, they use Bitbucket. And then you have a trace of what you've changed, and that's very valuable. And of course you have tools like Jira to put in issues and people can discuss. But what the problem is with having all these tools, is that at one point in time you don't know where to write information. So it would be nice if you could navigate [?] that from your model to history and discussion, in a more integrated fashion. That would be an additional value, I think. All the ingredients are there, but it's not well-integrated.
+
+MODERATOR: Can you imagine a state of the practice some time in the future, where we will have modeling tools with built-in features of communication which will make human language completely obsolete?
+
+PARTICIPANT-4: No. [Very categorically.]
+
+MODERATOR: Can you come up with an example where it is obvious that the lack of human communication is a blocker?
+
+[01:08:45]
+
+PARTICIPANT-4: My experience is that even if you had everything formalized in a DSL with underlying semantics, the understanding in your head is not the same as the actual information in the model. And despite natural language having all kinds of issues, it can communicate all kinds of things that you cannot communicate in the models, and also the uncertainty a person has in his head about those models, and that's something you simply cannot capture in models.
+
+PARTICIPANT-5: It's a little bit implied, because if you talk about formal semantics of a language, runtime semantics, for example, it's an abstract principle. There is a mapping between your language, the possible execution abstract runtime systems, and the mapping between the latter one and the reality. 
+
+PARTICIPANT-4: Or the mapping to your current understanding of what it *should* mean, but you haven't modeled.
+
+PARTICIPANT-5: I agree, but even if that would be theoretically possible, it will never be theoretically possible to measure whether your model, or the thing that it enables, is actually an adequate representation of the reality you want to realize.
+
+PARTICIPANT-4: ...or of the thing you have in your head.
+
+PARTICIPANT-5: Yes. You can't automatically measure whether a formalization of the text of the law is semantically exactly the same as it is in the model itself. Because then the law should be semantically consistent, which is not the case. 
+
+PARTICIPANT-4: ...and that can be the case even if you have formal semantics.
+
+PARTICIPANT-5: So that [communication by natural language] will always be a part of modeling.
+
+PARTICIPANT-4: Yes. Might not be spoken, might not be visual, might be telepathic, but it will be necessary still. Modeling always needs a broader context. One situation is when you want to expand a language, and add a new concept you cannot yet express but you have thought of. In language evolution this is not possible if you do it purely via the models.
+
+
+[01:12:05 WRAP-UP]
